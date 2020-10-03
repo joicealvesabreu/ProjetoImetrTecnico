@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 	
 	private static WebDriver driver;
 
-	 public static WebDriver InicializaDriver() {
+	 public static WebDriver inicializaDriver() {
         if (driver == null) {
-       //System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
             driver = new ChromeDriver();
             driver.get("http://www.inmrobo.tk/accounts/login/");
             driver.manage().window().maximize();
@@ -19,7 +19,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
         return driver;
     }
 
-    public WebDriver FechandoDriver() {
+    public WebDriver fechandoDriver() {
         if (driver != null) {
             driver.close();
         }
